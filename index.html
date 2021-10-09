@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Skale muzyczne</title>
+        <link rel = "stylesheet" href = "styles.css">
+        <link rel = "icon" href = "icon.png">
+        <script  src="script.js" type="module" defer></script>
+    </head>    
+    <body>
+        <header>
+            <h1>Skale.pl</h1>
+            <h3>skale muzyczne</h3>
+        </header>
+        <main>
+            <p>wybierz dźwięki poniżej i znajdź skalę, której szukasz</p>
+            <div class = "piano" ontouchstart="">
+                <div data-note ="C"  class ="key white"></div>
+                <div data-note ="C#" class ="key black"></div>
+                <div data-note ="D"  class ="key white"></div>
+                <div data-note ="D#" class ="key black"></div>
+                <div data-note ="E"  class ="key white"></div>
+                <div data-note ="F"  class ="key white"></div>
+                <div data-note ="F#" class ="key black"></div>
+                <div data-note ="G"  class ="key white"></div>
+                <div data-note ="G#" class ="key black"></div>
+                <div data-note ="A"  class ="key white"></div>
+                <div data-note ="A#" class ="key black"></div>
+                <div data-note ="B"  class ="key white"></div>
+
+            </div>
+            <div id = "result"><span id="result-text">Skale, które zawierają dźwięki </span> <span id="result-text2"></span></div>
+            <ul class = "scales-container">
+                <li class= scale> &nbsp;</li>
+            </ul>
+        </main>
+        <footer>
+            <pre>2021 © Mateusz Stanislaw Wozniak</pre>
+        </footer>
+    </body>
+</html>

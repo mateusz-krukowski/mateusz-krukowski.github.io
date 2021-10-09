@@ -1,0 +1,138 @@
+body {
+    margin:0;
+    font-family: arial;
+    background-color: blanchedalmond;
+    width: auto;
+}
+
+/*-----------------------------------*/
+header {
+    text-align: center;
+    background-color: #367e6f;
+    color:blanchedalmond;
+    border-bottom: 2px solid darkslategrey;
+    margin: 0;
+    position: relative;
+    width: auto;
+    position: sticky; top: 0;
+    z-index: 3;
+}
+h1, h3 {
+    margin: 0;
+}
+
+/*-----------------------------------*/
+main {
+    height: 1000px;
+    width: 750px;
+    margin: auto;
+    padding: 1%;
+    background-color: rgb(247, 218, 175);
+    color:black;
+    border-left: 2px solid darkslategrey;
+    border-right: 2px solid darkslategrey;
+}
+p{
+    margin-top: auto;
+}
+@media screen and (max-width: 1000px){
+    main{
+        width:auto;
+        height: 100vh;
+    }
+}
+/*====================================*/
+.piano{
+    display:flex;
+    margin: auto;
+    
+}
+.key{
+    height: calc(var(--width)*3);
+    width: var(--width);
+    position: relative;
+}
+.white{
+    --width:50px;
+    background-color: #FFFF;
+    border: 1px solid #333; 
+}
+
+.black{
+    --width: 30px;
+    background-color: #000;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+    
+}
+
+.key>p{
+    text-align: center;
+    margin-top: auto;
+    position: absolute;
+    bottom:0;
+    
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10%;
+    
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+.black>p{
+    color: #FFFF;
+    
+}
+.white>p {
+    padding: 0 10%;
+}
+.key:active{
+    background-color: #7d7d7d;
+}
+.key:hover{
+    background-color: #7d7d7d;
+}
+#active {
+    background-color: rgba(71, 243, 85, 0.829);
+}
+/*-----------------------------------*/
+#result{
+    margin-top: 1%;
+}
+#result-text{
+    user-select: none;
+    margin:2% 0;
+    display: inline;
+    font-size: 1em;
+}
+
+#result-text2 {
+    user-select: none;
+    margin:2% 0;
+    display: inline;
+    font-size: 1em;
+}
+
+.scale {
+    margin-bottom:1em;
+    background-color: #ffff;
+    border-width: 1px;
+    border-color: #0000;
+}
+
+/*-----------------------------------*/
+footer{
+    
+    background-color: grey;
+    width: auto;
+    text-align: center;
+    border-top: 2px solid darkslategrey
+}
+footer>pre{
+    margin:0;
+    padding:10px;
+}
+
