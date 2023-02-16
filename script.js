@@ -1,43 +1,52 @@
-import {scales} from '/scalesModule.js';
+import { scales } from '/scalesModule.js';
 
-//adding the <p> tag inside every .key element
+document.addEventListener("DOMContentLoaded", function() {
+    let scalesContainer = document.querySelector(".scales-container");
+    scalesContainer.innerHTML = "";
+});
+
 const key = document.querySelectorAll(".key");
-for(let i = 0; i < key.length; i++){
+for (let i = 0; i < key.length; i++) {
     console.log(key[i].getAttribute("data-note"));
-    let node = document.createElement("P"); 
-    let textnode = document.createTextNode(key[i].getAttribute("data-note")); 
-    node.appendChild(textnode); 
-    key[i].appendChild(node);  
+    let node = document.createElement("P");
+    let textnode = document.createTextNode(key[i].getAttribute("data-note"));
+    node.appendChild(textnode);
+    key[i].appendChild(node);
 }
 
 const keys = document.querySelectorAll('.key');
 var clickedKeys = [];
 keys.forEach(element => {
     element.addEventListener('click', event => {
-        //console.log(event.currentTarget.getAttribute("data-note"));
-
-        //if key not in array, add it and color the key, if present in the array, remove it and decolor
-        if(!clickedKeys.includes(event.currentTarget.getAttribute("data-note"))){ 
+        if (!clickedKeys.includes(event.currentTarget.getAttribute("data-note"))) {
             clickedKeys.push(event.currentTarget.getAttribute("data-note"));
-            event.currentTarget.querySelector('p').id = "active"; 
+            event.currentTarget.querySelector('p').id = "active";
             console.log(clickedKeys);
         }
-        else{
+        else {
             clickedKeys = clickedKeys.filter(
-                item=>item!==event.currentTarget.getAttribute("data-note")
-                )
-                event.currentTarget.querySelector('p').id = '';    
+                item => item !== event.currentTarget.getAttribute("data-note")
+            )
+            event.currentTarget.querySelector('p').id = '';
         }
         let resultText = document.getElementById("result-text2");
-        
         resultText.innerHTML = clickedKeys.join();
-       
-        //render all scale-boxes that have exactly the same sounds in it as clicked keys 
-        
+
+        // Clear the scales list
+        const scalesList = document.querySelector('.scales-container');
+        scalesList.innerHTML = '';
+
+        // Add scales that contain clicked keys
+        if (clickedKeys.length > 0) {
+            scales.forEach(scale => {
+                let containsAllNotes = clickedKeys.every(note => scale.sounds.includes(note));
+                if (containsAllNotes) {
+                    let scaleNode = document.createElement("li");
+                    scaleNode.classList.add('scale');
+                    scaleNode.innerHTML = scale.name;
+                    scalesList.appendChild(scaleNode);
+                }
+            });
+        }
     });
 });
-
-
-var result = document.querySelector("li")
-result.innerHTML = scales[1].sounds;
-console.log(scales);

@@ -22,7 +22,7 @@ h1, h3 {
 }
 
 /*-----------------------------------*/
-main {
+main{
     height: 1000px;
     width: 750px;
     margin: auto;
@@ -41,6 +41,14 @@ p{
         height: 100vh;
     }
 }
+
+li.scale {
+    float: left;
+    clear: both;
+    background-color: rgb(247, 218, 175);
+    cursor: pointer;
+    user-select: none;
+}
 /*====================================*/
 .piano{
     display:flex;
@@ -51,6 +59,7 @@ p{
     height: calc(var(--width)*3);
     width: var(--width);
     position: relative;
+    cursor: pointer;
 }
 .white{
     --width:50px;
@@ -78,10 +87,14 @@ p{
     border-radius: 10%;
     
     user-select: none;
-    -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
 }
+
+.key>p{
+    -moz-user-select: -moz-none;
+}
+
 .black>p{
     color: #FFFF;
     
