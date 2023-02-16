@@ -13,7 +13,6 @@ for (let i = 0; i < key.length; i++) {
     node.appendChild(textnode);
     key[i].appendChild(node);
 }
-
 const keys = document.querySelectorAll('.key');
 var clickedKeys = [];
 keys.forEach(element => {

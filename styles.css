@@ -53,7 +53,7 @@ li.scale {
 .piano{
     display:flex;
     margin: auto;
-    
+
 }
 .key{
     height: calc(var(--width)*3);
@@ -64,7 +64,7 @@ li.scale {
 .white{
     --width:50px;
     background-color: #FFFF;
-    border: 1px solid #333; 
+    border: 1px solid #333;
 }
 
 .black{
@@ -73,7 +73,7 @@ li.scale {
     margin-left: calc(var(--width) / -2);
     margin-right: calc(var(--width) / -2);
     z-index: 2;
-    
+
 }
 
 .key>p{
@@ -81,11 +81,11 @@ li.scale {
     margin-top: auto;
     position: absolute;
     bottom:0;
-    
+
     margin-left: 25%;
     margin-right: 25%;
     border-radius: 10%;
-    
+
     user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -97,7 +97,7 @@ li.scale {
 
 .black>p{
     color: #FFFF;
-    
+
 }
 .white>p {
     padding: 0 10%;
@@ -138,7 +138,7 @@ li.scale {
 
 /*-----------------------------------*/
 footer{
-    
+
     background-color: grey;
     width: auto;
     text-align: center;

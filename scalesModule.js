@@ -35,5 +35,3 @@ for(let j = 0; j< chromatic.length; j ++){
     scales.push( {'sounds': createScale(chromatic[j], "major"), name: chromatic[j]+' major' } )
     scales.push( {'sounds': createScale(chromatic[j], "minor"), name: chromatic[j]+' minor' } )
 }
-
-
