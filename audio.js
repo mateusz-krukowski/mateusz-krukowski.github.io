@@ -1,6 +1,6 @@
 export default function audio() {
     const keys = document.querySelectorAll('.key');
-    const audioFolder = 'res/';
+    const audioFolder = 'http://mkrukowski.pl/res/';
     const audioFiles = [
         '0.mp3',
         '1.mp3',
