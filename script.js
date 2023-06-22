@@ -1,5 +1,7 @@
 import { scales } from '/scalesModule.js';
+import audio from "./audio.js";
 
+audio()
 document.addEventListener("DOMContentLoaded", function() {
     let scalesContainer = document.querySelector(".scales-container");
     scalesContainer.innerHTML = "";
