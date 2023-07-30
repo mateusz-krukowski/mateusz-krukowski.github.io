@@ -1,0 +1,40 @@
+@import url("./fonts/clear-sans.css");
+@import url("tiles.css");
+
+
+body {
+    font-family: "Clear Sans", Arial, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    background-color: #FAF8EF;
+    color: #776E65;
+    overflow: hidden;
+}
+
+hr {
+    width: 320px;
+}
+
+#board {
+    width: 320px;
+    height: 320px;
+    background-color: #CDC1B4;
+    border: 5px solid #BBADA0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.tile {
+    width: 70px;
+    height: 70px;
+    border: 5px solid #BBADA0;
+    font-size: 40px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    grid-column: auto;
+    grid-row: auto;
+
+}
